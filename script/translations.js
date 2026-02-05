@@ -1,3 +1,10 @@
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
 const translations = {
     sr: {
         title1: "Cvećara Alena",
@@ -68,6 +75,7 @@ function moveLangToMenu() {
 
 window.addEventListener("resize", moveLangToMenu);
 moveLangToMenu();
+
 
 
 
