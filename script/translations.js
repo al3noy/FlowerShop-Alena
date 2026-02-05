@@ -62,21 +62,3 @@ flags.forEach(flag => {
 // zapamti jezik
 const savedLang = localStorage.getItem("lang") || "sr";
 setLanguage(savedLang);
-
-const navLang = document.querySelector(".nav-lang");
-
-function moveLangToMenu() {
-    if (window.innerWidth <= 768) {
-        navMenu.appendChild(navLang);
-    } else {
-        document.querySelector(".navbar-inner").appendChild(navLang);
-    }
-}
-
-window.addEventListener("resize", moveLangToMenu);
-moveLangToMenu();
-
-
-
-
-
