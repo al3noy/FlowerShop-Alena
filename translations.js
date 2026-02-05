@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const flag = e.target.closest("[data-lang]");
     if (!flag) return;
 
-    e.preventDefault();
     setLanguage(flag.dataset.lang);
 });
+
 
 
 
