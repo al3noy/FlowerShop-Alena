@@ -16,7 +16,7 @@ const translations = {
         teampj: "Jana je zadužena za moderne cvetne dekoracije i aranžmane za posebne događaje, sa posebnim osećajem za detalje i estetiku.",
         title4: "Gde se nalazimo?",
         wherep: "Cvećara Alena se nalazi u centru Pivnica, na svega 50 km od Novog Sada i 30 km od Bačke Palanke. Posetite nas da zajedno osmislimo savršen buket ili aranžman za svaku priliku, ili nas kontaktirajte kako bismo sve dogovorili unapred. Radno vreme: Ponedeljak–petak: 09–20h Nedelja: neradna",
-        team:"Naša ekipa",
+        team:"Naš tim",
     },
     sk: {
         title1: "Kvetinárstvo Alena",
@@ -44,7 +44,7 @@ const flags = document.querySelectorAll(".lang-picker img");
 
 function setLanguage(lang) { elements.forEach(el => { const key = el.dataset.i18n; el.textContent = translations[lang][key]; }); localStorage.setItem("lang", lang); }
 
-const lang = 'sr';
+const lang = 'sr'; // ili 'en'
 
 flags.forEach(flag => {
     flag.addEventListener("click", () => {
@@ -56,28 +56,25 @@ flags.forEach(flag => {
 const savedLang = localStorage.getItem("lang") || "sr";
 setLanguage(savedLang);
 
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    const navLang = document.querySelector(".nav-lang");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-    if (!hamburger || !navMenu || !navLang) return;
-
-    function moveLang() {
-        if (window.innerWidth <= 768) {
-            navMenu.appendChild(navLang);
-        } else {
-            document.querySelector(".navbar-inner").appendChild(navLang);
-        }
-    }
-
-    moveLang(); // ← OVO JE KLJUČNO ZA TELEFON
-    window.addEventListener("resize", moveLang);
-
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 });
+
+const navLang = document.querySelector(".nav-lang");
+
+function moveLangToMenu() {
+    if (window.innerWidth <= 768) {
+        navMenu.appendChild(navLang);
+    } else {
+        document.querySelector(".navbar-inner").appendChild(navLang);
+    }
+}
+
+window.addEventListener("resize", moveLangToMenu);
+moveLangToMenu();
 
 
 
