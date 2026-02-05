@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="media/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cvećara Alena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/teams/team-1/assets/css/team-1.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-inner">
+            <div class="nav-brand">
+                <a href="index.html"><img src="media/logo.png" alt="Cvećara Alena" class="nav-logo"></a>                
+                <span class="nav-title" data-i18n="title1">Cvećara Alena</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link nav-link-active" data-i18n="menu1">Početna</a>
+                <a href="pages/cvecara.html" class="nav-link" data-i18n="menu2">Cvećara</a>
+                <a href="pages/pogrebno.html" class="nav-link" data-i18n="menu3">Pogrebna oprema</a>
+            </nav>
+            <!-- LANG MOBILE -->
+   
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-lang">
+                <div class="lang-picker">
+                    <img src="media/sr.png" alt="Srpski" class="flag" data-lang="sr">
+                    <img src="media/sk.jpg" alt="Slovenčina" class="flag" data-lang="sk">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-video">
+            <video src="media/homevVideo2.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="hero-content">
+            <p class="hero-kicker" data-i18n="title2">Dobrodošli u Cvećaru Alena</p>
+            <h1 class="hero-title" data-i18n="title3">Pravimo cveće baš onako kako ga vi zamislite.</h1>
+            <p class="hero-text" data-i18n="herotext">
+                Našim aranžmanima pravimo trenutke nezaboravnim. Bilo da slavite,
+                čestitate ili se opraštate, pomoći ćemo vam da izaberete savršeno cveće.
+            </p>
+            <div class="hero-actions">
+                <a href="pages/cvecara.html" class="btn hero-btn-primary" data-i18n="herobtn">Pogledaj ponudu</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="container">
+        <div class="about-us-card">            
+            <div class="left-us">
+                <h2 data-i18n="abouttit">O nama</h2> 
+                <p data-i18n="aboutp">Cvećara Alena posluje od 2000. godine i već više od dve decenije sa ljubavlju i posvećenošću stvara cvetne kreacije za sve životne prilike. Naš cilj je da svaku vašu ideju pretočimo u jedinstven aranžman koji prenosi emociju i ostavlja snažan utisak.
+                U našoj ponudi nalaze se buketi, kreativni cvetni aranžmani, moderni box paketi, kao i pažljivo osmišljeni pokloni za rođendane, godišnjice, proslave i druge posebne trenutke. Posebnu pažnju posvećujemo kvalitetu, svežini cveća i detaljima, jer verujemo da upravo oni čine razliku.                
+                Bilo da slavite, čestitate ili želite nekome da ulepšate dan, u Cvećari Alena možete računati na iskustvo, kreativnost i pouzdanost.</p>
+
+                <!-- slika za mobilni prikaz, ispod teksta -->
+                <div class="about-us-image-mobile">
+                    <img src="media/3.jpeg" alt="Cvećara Alena">
+                </div>
+            </div>
+
+            <!-- slika za desktop prikaz, desno od teksta -->
+            <div class="right-us">
+                <img src="media/3.jpeg" alt="Cvećara Alena">   
+            </div>             
+        </div> 
+
+        <div class="about-us-card-c">
+            <h2 class="team-section-title" data-i18n="team">Naša ekipa</h2>
+
+            <div class="team-cards">
+                <article class="team-card">
+                    <div class="team-card-image">
+                        <img src="media/alena.jpg" alt="Alena Českova">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-card-name">Alena Českova</h3>
+                        <p class="team-card-role" data-i18n="teamabout">Vlasnica & floristkinja</p>
+                        <p class="team-card-text" data-i18n="teamp">
+                            Sa više od 20 godina iskustva u cvećarstvu, Alena brine da svaki aranžman bude savršeno
+                            uklopljen uz priliku i emociju koju želite da prenesete.
+                        </p>
+                    </div>
+                    <div class="team-card-footer">
+                        <span class="team-card-footer-icon">📞</span>
+                        <span class="team-card-footer-text">+381 060 7562740 </span>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-image">
+                        <img src="media/jana.jpg" alt="Jana Česko">
+                    </div>
+                    <div class="team-card-body">
+                        <h3 class="team-card-name">Jana Česko</h3>
+                        <p class="team-card-role" data-i18n="teamaboutj">Floristkinja & dekorater</p>
+                        <p class="team-card-text" data-i18n="teampj">
+                            Jana je zadužena za moderne cvetne dekoracije i aranžmane za posebne događaje, sa posebnim
+                            osećajem za detalje i estetiku.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="team-card-footer">
+                        <span class="team-card-footer-icon">📞</span>
+                        <span class="team-card-footer-text">+381 065 6216707</span>
+                    </div>
+                    
+                </article>
+            </div>
+        </div> 
+
+
+    </div>
+
+    <section class="location-section">
+        <div class="location-inner">
+            <div class="location-text">
+                <h2 data-i18n="title4">Gde se nalazimo?</h2>
+                <p data-i18n="wherep">
+                    Cvećara Alena se nalazi u centru Pivnica, na svega 50 km od Novog Sada i 30 km od Bačke Palanke. Posetite nas da zajedno osmislimo savršen buket ili aranžman za svaku priliku, ili nas kontaktirajte kako bismo sve dogovorili unapred.
+<br>
+<b>Radno vreme:</b>
+<br>
+Ponedeljak–petak: 09–20h
+<br>
+Nedelja: neradna<br>
+                </p>
+            </div>
+            <div class="location-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.6792260779591!2d19.453492590889937!3d45.46755402778303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b5f395e26626b%3A0x5db98a4323627de8!2sCve%C4%87ara%20Alena%20Pivnice!5e1!3m2!1ssr!2sde!4v1770289383554!5m2!1ssr!2sde" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="index.html"><img src="media/logo.png" alt="Cvećara Alena" class="footer-logo"></a>                
+            <span class="nav-title">© 2026 Cvećara Alena. All rights reserved. | Made in Serbia</span>
+        </div>
+        <div class="footer-links">
+            <a href="https://www.facebook.com/alena.ceskova.71" class="nav-link"><img src="media/fb.png" alt="Facebook" class="footer-icon"></a>
+            <a href="https://www.instagram.com/jana_cesko_/" class="nav-link"><img src="media/insta.png" alt="Instagram" class="footer-icon"></a>
+            <a href="mailto:alenaceskova@yahoo.com" class="nav-link"><img src="media/mailIC.png" alt="Mail" class="footer-icon"></a>
+        </div>        
+    </div>
+</footer>
+    
+    <script src="script/translations.js"></script>
+</body>
+</html>
