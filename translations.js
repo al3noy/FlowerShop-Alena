@@ -9,15 +9,16 @@ const translations = {
         herotext: "Našim aranžmanima pravimo trenutke nezaboravnim. Bilo da slavite, čestitate ili se opraštate, pomoći ćemo vam da izaberete savršeno cveće.",
         herobtn: "Pogledaj ponudu",
         abouttit: "O nama",
-        aboutp: "Cvećara Alena posluje od 2000. godine i već više od dve decenije sa ljubavlju i posvećenošću stvara cvetne kreacije za sve životne prilike. Naš cilj je da svaku vašu ideju pretočimo u jedinstven aranžman koji prenosi emociju i ostavlja snažan utisak. U našoj ponudi nalaze se buketi, kreativni cvetni aranžmani, moderni box paketi, kao i pažljivo osmišljeni pokloni za rođendane, godišnjice, proslave i druge posebne trenutke. Posebnu pažnju posvećujemo kvalitetu, svežini cveća i detaljima, jer verujemo da upravo oni čine razliku. Bilo da slavite, čestitate ili želite nekome da ulepšate dan, u Cvećari Alena možete računati na iskustvo, kreativnost i pouzdanost.",
-        teamabout:"Vlasnica & floristkinja",
-        teamp: "Sa više od 20 godina iskustva u cvećarstvu, Alena brine da svaki aranžman bude savršeno uklopljen uz priliku i emociju koju želite da prenesete.",
-        teamaboutj:"Floristkinja & dekorater",
-        teampj: "Jana je zadužena za moderne cvetne dekoracije i aranžmane za posebne događaje, sa posebnim osećajem za detalje i estetiku.",
+        aboutp: "Cvećara Alena posluje od 2000. godine i već više od dve decenije sa ljubavlju i posvećenošću stvara cvetne kreacije za sve životne prilike.",
+        team: "Naš tim",
+        teamabout: "Vlasnica & floristkinja",
+        teamp: "Sa više od 20 godina iskustva u cvećarstvu, Alena brine da svaki aranžman bude savršeno uklopljen uz priliku i emociju.",
+        teamaboutj: "Floristkinja & dekorater",
+        teampj: "Jana je zadužena za moderne cvetne dekoracije i aranžmane za posebne događaje.",
         title4: "Gde se nalazimo?",
-        wherep: "Cvećara Alena se nalazi u centru Pivnica, na svega 50 km od Novog Sada i 30 km od Bačke Palanke. Posetite nas da zajedno osmislimo savršen buket ili aranžman za svaku priliku, ili nas kontaktirajte kako bismo sve dogovorili unapred. Radno vreme: Ponedeljak–petak: 09–20h Nedelja: neradna",
-        team:"Naš tim",
+        wherep: "Cvećara Alena se nalazi u centru Pivnica, 50 km od Novog Sada i 30 km od Bačke Palanke. Radno vreme: Pon–Pet 09–20h. Nedelja neradna."
     },
+
     sk: {
         title1: "Kvetinárstvo Alena",
         menu1: "Domov",
@@ -25,33 +26,47 @@ const translations = {
         menu3: "Pohrebné vybavenie",
         title2: "Vitajte v kvetinárstve Alena",
         title3: "Vyrábame kvety presne podľa vašich predstáv.",
-        herotext: "S našimi aranžmánmi vytvárame nezabudnuteľné chvíle. Či už oslavujete, gratulujete alebo sa lúčite, pomôžeme vám vybrať tie správne kvety.",
+        herotext: "S našimi aranžmánmi vytvárame nezabudnuteľné chvíle.",
         herobtn: "Zobraziť ponuku",
         abouttit: "O nás",
-        aboutp: "Kvetinárstvo Alena pôsobí na trhu od roku 2000 a už viac ako dve desaťročia s láskou a oddanosťou vytvára kvetinové kreácie pre všetky príležitosti. Naším cieľom je premeniť každý váš nápad na jedinečný aranžmán, ktorý vyvolá emócie a zanechá silný dojem. Naša ponuka zahŕňa kytice, kreatívne kvetinové aranžmány, moderné krabicové balíčky, ako aj starostlivo navrhnuté darčeky k narodeninám, výročiam, oslavám a iným výnimočným chvíľam. Venujeme osobitnú pozornosť kvalite, čerstvosti kvetov a detailom, pretože veríme, že práve tie robia rozdiel. Či už oslavujete, blahoželáte alebo chcete niekomu spríjemniť deň, v Kvetinárstve  Alena sa môžete spoľahnúť na skúsenosti, kreativitu a spoľahlivosť.",
-        teamabout: "Majiteľ a kvetinár",
-        teamp: "S viac ako 20-ročnými skúsenosťami v kvetinárstve sa Alena postará o to, aby bol každý aranžmán dokonalý, v súlade s príležitosťou a emóciou, ktorú chcete vyjadriť.",
-        teampj: "Jana má na starosti moderné kvetinové dekorácie a aranžmány pre špeciálne udalosti, so zmyslom pre detail a estetiku.",
-        teamaboutj:"Kvetinár a dekoratér",
-        title4: "Kde sa nachádzame?",
-        wherep: "Cvećara Alena sa nachádza v centre Pivnice, len 50 km od Nového Sadu a 30 km od Báčskej Palanky. Navštívte nás a spoločne navrhnite perfektnú kyticu alebo aranžmán na akúkoľvek príležitosť, alebo nás kontaktujte a dohodnite si všetko vopred. Pracovná doba: Pondelok - Piatok: 09:00 - 20:00 Nedeľa: zatvorené",
+        aboutp: "Kvetinárstvo Alena pôsobí od roku 2000 a vytvára kvetinové aranžmány pre všetky príležitosti.",
         team: "Náš tím",
+        teamabout: "Majiteľka & kvetinárka",
+        teamp: "Alena sa stará o to, aby bol každý aranžmán dokonale prispôsobený príležitosti.",
+        teamaboutj: "Kvetinárka & dekoratérka",
+        teampj: "Jana má na starosti moderné kvetinové dekorácie.",
+        title4: "Kde sa nachádzame?",
+        wherep: "Kvetinárstvo Alena sa nachádza v centre Pivnice. Pracovná doba: Po–Pi 09:00–20:00. Nedeľa zatvorené."
     }
 };
 
-const elements = document.querySelectorAll("[data-i18n]");
-const flags = document.querySelectorAll(".lang-picker img");
+// === FUNKCIONALNA LOGIKA ===
+document.addEventListener("DOMContentLoaded", () => {
 
-function setLanguage(lang) { elements.forEach(el => { const key = el.dataset.i18n; el.textContent = translations[lang][key]; }); localStorage.setItem("lang", lang); }
+    const elements = document.querySelectorAll("[data-i18n]");
 
-const lang = 'sr'; // ili 'en'
+    function setLanguage(lang) {
+        if (!translations[lang]) return;
 
-flags.forEach(flag => {
-    flag.addEventListener("click", () => {
+        elements.forEach(el => {
+            const key = el.dataset.i18n;
+            if (translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+
+        localStorage.setItem("lang", lang);
+    }
+
+    // EVENT DELEGATION (radi i kad se zastavice premestaju)
+    document.addEventListener("click", (e) => {
+        const flag = e.target.closest(".lang-picker img");
+        if (!flag) return;
+
         setLanguage(flag.dataset.lang);
     });
-});
 
-// zapamti jezik
-const savedLang = localStorage.getItem("lang") || "sr";
-setLanguage(savedLang);
+    // Ucitaj zapamceni jezik
+    const savedLang = localStorage.getItem("lang") || "sr";
+    setLanguage(savedLang);
+});
