@@ -59,12 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // EVENT DELEGATION (radi i kad se zastavice premestaju)
-    document.addEventListener("click", (e) => {
-        const flag = e.target.closest(".lang-picker img");
-        if (!flag) return;
+   document.addEventListener("click", (e) => {
+    const flag = e.target.closest("[data-lang]");
+    if (!flag) return;
 
-        setLanguage(flag.dataset.lang);
-    });
+    e.preventDefault();
+    setLanguage(flag.dataset.lang);
+});
+
+
 
     // Ucitaj zapamceni jezik
     const savedLang = localStorage.getItem("lang") || "sr";
