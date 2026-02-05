@@ -56,13 +56,6 @@ flags.forEach(flag => {
 const savedLang = localStorage.getItem("lang") || "sr";
 setLanguage(savedLang);
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
 const navLang = document.querySelector(".nav-lang");
 
 function moveLangToMenu() {
@@ -75,6 +68,7 @@ function moveLangToMenu() {
 
 window.addEventListener("resize", moveLangToMenu);
 moveLangToMenu();
+
 
 
 
