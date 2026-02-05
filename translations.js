@@ -39,42 +39,81 @@ const translations = {
     }
 };
 
-const elements = document.querySelectorAll("[data-i18n]");
-const flags = document.querySelectorAll(".lang-picker img");
-
-function setLanguage(lang) { elements.forEach(el => { const key = el.dataset.i18n; el.textContent = translations[lang][key]; }); localStorage.setItem("lang", lang); }
-
-const lang = 'sr'; // ili 'en'
-
-flags.forEach(flag => {
-    flag.addEventListener("click", () => {
-        setLanguage(flag.dataset.lang);
-    });
-});
-
-// zapamti jezik
-const savedLang = localStorage.getItem("lang") || "sr";
-setLanguage(savedLang);
-
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
-const navLang = document.querySelector(".nav-lang");
-
-function moveLangToMenu() {
-    if (window.innerWidth <= 768) {
-        navMenu.appendChild(navLang);
-    } else {
-        document.querySelector(".navbar-inner").appendChild(navLang);
+// Čekaj da se DOM učita pre nego što pokušaš da pristupiš elementima
+document.addEventListener('DOMContentLoaded', function() {
+    // Funkcija za postavljanje jezika
+    function setLanguage(lang) {
+        const elements = document.querySelectorAll("[data-i18n]");
+        elements.forEach(el => {
+            const key = el.dataset.i18n;
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+        try {
+            localStorage.setItem("lang", lang);
+        } catch(e) {
+            // Ako localStorage ne radi (npr. u incognito modu), ignoriši grešku
+            console.warn('localStorage not available:', e);
+        }
     }
-}
 
-window.addEventListener("resize", moveLangToMenu);
-moveLangToMenu();
+    // Inicijalizacija prevoda
+    let savedLang = "sr";
+    try {
+        savedLang = localStorage.getItem("lang") || "sr";
+    } catch(e) {
+        console.warn('localStorage not available:', e);
+    }
+    setLanguage(savedLang);
+
+    // Event listeneri za zastavice
+    const flags = document.querySelectorAll(".lang-picker img");
+    flags.forEach(flag => {
+        flag.addEventListener("click", () => {
+            const lang = flag.dataset.lang;
+            if (lang && translations[lang]) {
+                setLanguage(lang);
+            }
+        });
+    });
+
+    // Hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            navMenu.classList.toggle("active");
+        });
+    }
+
+    // Funkcija za pomeranje jezika u meni na mobilnom
+    const navLang = document.querySelector(".nav-lang");
+    const navbarInner = document.querySelector(".navbar-inner");
+    
+    function moveLangToMenu() {
+        if (!navLang || !navMenu || !navbarInner) return;
+        
+        if (window.innerWidth <= 768) {
+            // Na mobilnom - premesti u meni
+            if (navLang.parentNode !== navMenu) {
+                navMenu.appendChild(navLang);
+            }
+        } else {
+            // Na desktopu - vrati nazad u navbar-inner
+            if (navLang.parentNode !== navbarInner) {
+                navbarInner.appendChild(navLang);
+            }
+        }
+    }
+
+    // Pozovi na početku i na resize
+    moveLangToMenu();
+    window.addEventListener("resize", moveLangToMenu);
+});
 
 
 
