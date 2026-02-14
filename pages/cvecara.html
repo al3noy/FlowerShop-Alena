@@ -15,13 +15,21 @@
         <div class="navbar-inner">
             <div class="nav-brand">
                 <a href="../index.html"><img src="../media/logo.png" alt="Cvećara Alena" class="nav-logo"></a>
-                <span class="nav-title">Cvećara Alena</span>
+                <span class="nav-title" data-i18n="title1">Cvećara Alena</span>
             </div>
             <nav class="nav-menu">
-                <a href="../index.html" class="nav-link">Početna</a>
-                <a href="cvecara.html" class="nav-link nav-link-active">Cvećara</a>
-                <a href="pogrebno.html" class="nav-link">Pogrebna oprema</a>
+                <a href="../index.html" class="nav-link" data-i18n="menu1">Početna</a>
+                <a href="cvecara.html" class="nav-link nav-link-active" data-i18n="menu2">Cvećara</a>
+                <a href="pogrebno.html" class="nav-link" data-i18n="menu3">Pogrebna oprema</a>
             </nav>
+            <!-- LANG MOBILE -->
+   
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <div class="nav-lang">
                 <div class="lang-picker">
                     <img src="../media/sr.png" alt="Srpski" class="flag" data-lang="sr">
@@ -36,23 +44,166 @@
             <video src="../media/homeVideo.mp4" autoplay muted loop playsinline></video>
         </div>
         <div class="hero-content">
-            <!-- <p class="hero-kicker">Dobrodošli u Cvećaru Alena</p> -->
-            <!-- <h1 class="hero-title">Pravimo cveće<br> baš onako kako ga vi zamislite.</h1> -->
-            <h1 class="hero-title">The page is currently under construction</h1>
-            <!-- <p class="hero-text">
+            <p class="hero-kicker" data-i18n="title2">Dobrodošli u Cvećaru Alena</p>
+            <h1 class="hero-title" data-i18n="titlecvec">
+                Izdvajamo za vas, naše najbolje usluge
+            </h1>
+            <p class="hero-text" data-i18n="herotext">
                 Našim aranžmanima pravimo trenutke nezaboravnim. Bilo da slavite,
                 čestitate ili se opraštate, pomoći ćemo vam da izaberete savršeno cveće.
             </p>
             <div class="hero-actions">
-                <a href="cvecara.html" class="btn hero-btn-primary">Pogledaj ponudu</a>
-                <a href="../index.html" class="btn hero-btn-secondary">Nazad na početnu</a>
-            </div> -->
+                <a href="#products-section" class="btn hero-btn-primary" data-i18n="herobtn">Pogledaj ponudu</a>
+                <a href="../index.html" class="btn hero-btn-secondary" data-i18n="btnpocetna">Nazad na početnu</a>
+            </div>
         </div>
     </main>
+
+    <section class="cvecara-page">       
+
+        <div class="cvecara-inner">
+            <!-- Akcijske kartice -->
+            <section class="promo-cards">
+                <a href="../index.html#location" class="promo-card">
+                    <div class="promo-card-image">
+                        <img src="../novo/val4.jpg" alt="Valentine's Day ponuda">
+                    </div>
+                    <div class="promo-card-content">
+                        <span class="promo-kicker" data-i18n="exc">Izdvajamo za vas</span>
+                        <h2 class="promo-title">Valentine's Day</h2>
+                        <span class="promo-cta" data-i18n="exctext">Ponuda je trenutno aktivna u cvećari</span>
+                    </div>
+                </a>
+                <a href="../index.html#location" class="promo-card">
+                    <div class="promo-card-image">
+                        <img src="../novo/cvet2.jpg" alt="8. mart ponuda">
+                    </div>
+                    <div class="promo-card-content">
+                        <span class="promo-kicker" data-i18n="exc">Izdvajamo za vas</span>
+                        <h2 class="promo-title">International Women's Day (March 8)</h2>
+                        <span class="promo-cta" data-i18n="exctext">Ponuda je trenutno aktivna u cvećari</span>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Redovne usluge – tipovi cveća -->
+            <section class="products-section" id="products-section">
+                <h2 class="products-heading" data-i18n="redovno">Redovne usluge</h2>
+                <p class="products-subtitle" data-i18n="types">Tipovi cveća koje prodajemo – buketi, aranžmani i ukrasno cveće po vašoj želji.</p>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/ruzz.jpg" alt="Ruže">
+                            <span class="product-badge" data-i18n="popular">POPULARNO</span>
+                        </div>
+                        <h3 class="product-title" data-i18n="roses">Ruže</h3>
+                        <p class="product-desc" data-i18n="rosestext">Buketi i aranžmani u raznim bojama</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/cvet.jpg" alt="Buketi">                            
+                        </div>
+                        <h3 class="product-title" data-i18n="buket">Buketi</h3>
+                        <p class="product-desc" data-i18n="bukettext">Prolećni buketi i kompozicije</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/val3.jpg" alt="Box aranžman">
+                        </div>
+                        <h3 class="product-title" data-i18n="box">Box aranžmani</h3>
+                        <p class="product-desc" data-i18n="boxtext">Elegantni box za sve prilike</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/xlbuk.jpg" alt="XL Buketi">
+                        </div>
+                        <h3 class="product-title" data-i18n="xlbuket">XL Buketi</h3>
+                        <p class="product-desc" data-i18n="xlbukettext">Veliko cveće i buketi</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/pers.jpg" alt="Personalizovani buketi">
+                            <span class="product-badge" data-i18n="popular">POPULARNO</span>
+                        </div>
+                        <h3 class="product-title" data-i18n="personal">Personalizovani buket/aranžman</h3>
+                        <p class="product-desc" data-i18n="personaltext">Personalizovani detalji po vašoj želji</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/rodj2.jpg" alt="Rođendani">
+                        </div>
+                        <h3 class="product-title" data-i18n="rodj">Rođendani</h3>
+                        <p class="product-desc" data-i18n="rodjtext">Veseli aranžmani</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../media/kola2.jpg" alt="Dekoracija vozila">
+                            <span class="product-badge product-badge-new" data-i18n="new">NOVO</span>
+                        </div>
+                        <h3 class="product-title" data-i18n="auti">Dekoracija vozila</h3>
+                        <p class="product-desc" data-i18n="autitext">Po vašoj specijalnoj potrebi</p>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="../novo/ukras.jpg" alt="Dekoracija prostora">
+                            <span class="product-badge product-badge-new" data-i18n="new">NOVO</span>
+                        </div>
+                        <h3 class="product-title" data-i18n="prostor">Dekoracija prostora</h3>
+                        <p class="product-desc" data-i18n="prostortext">Po vašoj želji i prilici</p>
+                    </article>
+                </div>
+                
+            </section>
+        </div>
+         <!-- Marquee galerija – buketi u animaciji -->
+         <div class="marquee-wrap" aria-hidden="true">
+            <h2 class="products-heading" data-i18n="gallery">Galerija naših proizvoda</h2>
+            <p class="products-subtitle" data-i18n="gallerytext">Izaberite vaš ukras već danas.</p>
+            <div class="marquee-track">
+                <div class="marquee-track-inner">
+                    <div class="marquee-item"><img src="../novo/buk.jpg" alt="Buket"></div>
+                    <div class="marquee-item"><img src="../novo/cvet2.jpg" alt="Cveće"></div>
+                    <div class="marquee-item"><img src="../novo/gal.jpg" alt="Galerija"></div>
+                    <div class="marquee-item"><img src="../novo/gal2.jpg" alt="Galerija"></div>
+                    <div class="marquee-item"><img src="../novo/rand.jpg" alt="Buket"></div>
+                    <div class="marquee-item"><img src="../novo/ruz.jpg" alt="Ruže"></div>
+                    <div class="marquee-item"><img src="../novo/val.jpg" alt="Aranžman"></div>
+                    <div class="marquee-item"><img src="../novo/val2.jpg" alt="Aranžman"></div>
+                    <div class="marquee-item"><img src="../novo/gal5.jpg" alt="Galerija"></div>
+                    <div class="marquee-item"><img src="../novo/krstenje.jpg" alt="Krštenje"></div>
+                    <div class="marquee-item"><img src="../novo/gal6.jpg" alt="Galerija"></div>
+                    <div class="marquee-item"><img src="../media/1.jpeg" alt="Proizvod"></div>
+                    <div class="marquee-item"><img src="../media/2.jpeg" alt="Proizvod"></div>
+                    <div class="marquee-item"><img src="../media/jana2.jpg" alt="Proizvod"></div>
+                    <div class="marquee-item"><img src="../media/kola4.jpg" alt="Dekoracija"></div>
+                    <div class="marquee-item"><img src="../media/kola5.jpg" alt="Dekoracija"></div>
+                    <div class="marquee-item"><img src="../novo/gal4.jpg" alt="Galerija"></div>
+                    <!-- duplikat za besprekornu petlju -->
+                    <div class="marquee-item"><img src="../novo/buk.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/cvet2.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/gal.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/gal2.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/rand.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/ruz.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/val.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/val2.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/gal5.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/krstenje.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/gal6.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../media/1.jpeg" alt=""></div>
+                    <div class="marquee-item"><img src="../media/2.jpeg" alt=""></div>
+                    <div class="marquee-item"><img src="../media/jana2.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../media/kola4.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../media/kola5.jpg" alt=""></div>
+                    <div class="marquee-item"><img src="../novo/gal4.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="index.html"><img src="../media/logo.png" alt="Cvećara Alena" class="footer-logo"></a>                
+                <a href="../index.html"><img src="../media/logo.png" alt="Cvećara Alena" class="footer-logo"></a>                
                 <span class="nav-title">© 2026 Cvećara Alena. All rights reserved. | Made in Serbia</span>
             </div>
             <div class="footer-links">
@@ -63,7 +214,6 @@
         </div>
     </footer>
         
-        <script src="script/translations.js"></script>
-    
+        <script src="../script/translations.js"></script>    
 </body>
 </html>
